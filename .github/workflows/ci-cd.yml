@@ -36,3 +36,4 @@ jobs:
           KUBECONFIG: ${{ secrets.KUBECONFIG }}
         run: |
           kubectl set image deployment/auth-app auth-app=your-dockerhub-username/auth-app:latest
+          
