@@ -18,14 +18,14 @@ public class DoctorEntityMapper {
 
     Doctor toDomain(DoctorEntity doctorEntity){
         return new Doctor(doctorEntity.getName(), doctorEntity.getDateOfBirth(), doctorEntity.getCrm(),
-                doctorEntity.getPhone(), doctorEntity.getEmail(), doctorEntity.getPassword());
+                doctorEntity.getPhone(), doctorEntity.getEmail(), doctorEntity.getPassword(), null);
     }
 
     List<Doctor> toDomainList(List<DoctorEntity> doctorEntityList){
         List<Doctor> doctorList = new ArrayList<>();
         for(DoctorEntity doctorEntity : doctorEntityList){
             doctorList.add(new Doctor(doctorEntity.getName(), doctorEntity.getDateOfBirth(), doctorEntity.getCrm(),
-                    doctorEntity.getPhone(), doctorEntity.getEmail(), doctorEntity.getPassword()));
+                    doctorEntity.getPhone(), doctorEntity.getEmail(), doctorEntity.getPassword(), null));
         }
         return doctorList;
     }

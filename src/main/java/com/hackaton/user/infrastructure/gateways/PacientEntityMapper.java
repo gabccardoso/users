@@ -16,14 +16,14 @@ public class PacientEntityMapper {
 
     Pacient toDomain(PacientEntity pacient){
         return new Pacient(pacient.getName(), pacient.getDateOfBirth(), pacient.getCpf(), pacient.getPhone(),
-                pacient.getEmail(), pacient.getPassword());
+                pacient.getEmail(), pacient.getPassword(), null);
     }
 
     List<Pacient> toDomainList(List<PacientEntity> pacientEntityList){
         List<Pacient> pacientList = new ArrayList<>();
         for(PacientEntity pacient:pacientEntityList){
             pacientList.add(new Pacient(pacient.getName(), pacient.getDateOfBirth(), pacient.getCpf(), pacient.getPhone(),
-                    pacient.getEmail(), pacient.getPassword()));
+                    pacient.getEmail(), pacient.getPassword(), null));
         }
         return pacientList;
     }
